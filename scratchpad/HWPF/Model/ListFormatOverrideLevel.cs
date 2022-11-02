@@ -97,7 +97,7 @@ namespace NPOI.HWPF.Model
             byte[] buf = new byte[GetSizeInBytes()];
 
             int offset = 0;
-            LittleEndian.PutInt(buf, _iStartAt);
+            LittleEndian.PutInt(buf, 0, _iStartAt);
             offset += LittleEndianConsts.INT_SIZE;
             buf[offset++] = _info;
             Array.Copy(_reserved, 0, buf, offset, 3);

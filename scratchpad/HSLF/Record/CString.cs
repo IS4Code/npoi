@@ -66,7 +66,7 @@ namespace NPOI.HSLF.Record
             }
             set
             {
-                LittleEndian.PutShort(_header, (short)value);
+                LittleEndian.PutShort(_header, 0, (short)value);
             }
         }
 

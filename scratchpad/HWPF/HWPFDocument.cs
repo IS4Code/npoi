@@ -809,6 +809,19 @@ namespace NPOI.HWPF
         {
             return _fields;
         }
+
+        public override void Write()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Write(FileInfo newFile)
+        {
+            using (var stream = newFile.OpenWrite())
+            {
+                Write(newFile);
+            }
+        }
     }
 
 }

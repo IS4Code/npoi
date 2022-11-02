@@ -460,7 +460,7 @@ namespace NPOI.HWPF.UserModel
 
             byte[] grpprl = ParagraphSprmCompressor.CompressParagraphProperty(props, baseStyle);
             byte[] withIndex = new byte[grpprl.Length + LittleEndianConsts.SHORT_SIZE];
-            LittleEndian.PutShort(withIndex, (short)styleIndex);
+            LittleEndian.PutShort(withIndex, 0, (short)styleIndex);
             Array.Copy(grpprl, 0, withIndex, LittleEndianConsts.SHORT_SIZE, grpprl.Length);
             SprmBuffer buf = new SprmBuffer(withIndex);
 
@@ -511,7 +511,7 @@ namespace NPOI.HWPF.UserModel
 
             byte[] grpprl = ParagraphSprmCompressor.CompressParagraphProperty(props, baseStyle);
             byte[] withIndex = new byte[grpprl.Length + LittleEndianConsts.SHORT_SIZE];
-            LittleEndian.PutShort(withIndex, (short)styleIndex);
+            LittleEndian.PutShort(withIndex, 0, (short)styleIndex);
             Array.Copy(grpprl, 0, withIndex, LittleEndianConsts.SHORT_SIZE, grpprl.Length);
             SprmBuffer buf = new SprmBuffer(withIndex);
 

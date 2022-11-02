@@ -72,7 +72,7 @@ namespace NPOI.HSLF.Record
         public static void WriteLittleEndian(int i, Stream o)
         {
             byte[] bi = new byte[4];
-            LittleEndian.PutInt(bi, i);
+            LittleEndian.PutInt(bi, 0, i);
             o.Write(bi, (int)o.Position, bi.Length);
         }
         /**
@@ -81,7 +81,7 @@ namespace NPOI.HSLF.Record
         public static void WriteLittleEndian(short s, Stream o)
         {
             byte[] bs = new byte[2];
-            LittleEndian.PutShort(bs, s);
+            LittleEndian.PutShort(bs, 0, s);
             o.Write(bs,(int)o.Position,bs.Length);
         }
 

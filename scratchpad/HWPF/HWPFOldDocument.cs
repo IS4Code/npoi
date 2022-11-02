@@ -143,5 +143,18 @@ namespace NPOI.HWPF
         {
             throw new InvalidOperationException("Writing is not available for the older file formats");
         }
+
+        public override void Write()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Write(FileInfo newFile)
+        {
+            using (var stream = newFile.OpenWrite())
+            {
+                Write(newFile);
+            }
+        }
     }
 }

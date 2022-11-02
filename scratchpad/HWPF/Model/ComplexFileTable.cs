@@ -92,7 +92,7 @@ namespace NPOI.HWPF.Model
             byte[] table = _tpt.WriteTo(wordDocumentStream);
 
             byte[] numHolder = new byte[LittleEndianConsts.INT_SIZE];
-            LittleEndian.PutInt(numHolder, table.Length);
+            LittleEndian.PutInt(numHolder, 0, table.Length);
             tableStream.Write(numHolder);
             tableStream.Write(table);
         }

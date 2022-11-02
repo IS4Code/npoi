@@ -154,7 +154,7 @@ namespace NPOI.HWPF.Model
                     byte[] std = _styleDescriptions[x].ToArray();
 
                     // adjust the size so it is always on a word boundary
-                    LittleEndian.PutShort(sizeHolder, (short)((std.Length) + (std.Length % 2)));
+                    LittleEndian.PutShort(sizeHolder, 0, (short)((std.Length) + (std.Length % 2)));
                     out1.Write(sizeHolder);
                     out1.Write(std);
 

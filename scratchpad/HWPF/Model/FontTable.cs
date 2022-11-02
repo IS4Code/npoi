@@ -113,9 +113,9 @@ namespace NPOI.HWPF.Model
             HWPFStream tableStream = sys.GetStream("1Table");
 
             byte[] buf = new byte[LittleEndianConsts.SHORT_SIZE];
-            LittleEndian.PutShort(buf, _stringCount);
+            LittleEndian.PutShort(buf, 0, _stringCount);
             tableStream.Write(buf);
-            LittleEndian.PutShort(buf, _extraDataSz);
+            LittleEndian.PutShort(buf, 0, _extraDataSz);
             tableStream.Write(buf);
 
             for (int i = 0; i < _fontNames.Length; i++)

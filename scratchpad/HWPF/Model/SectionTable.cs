@@ -175,7 +175,7 @@ namespace NPOI.HWPF.Model
                 // write the sepx to the document stream. starts with a 2 byte size
                 // followed by the grpprl
                 byte[] shortBuf = new byte[2];
-                LittleEndian.PutShort(shortBuf, (short)grpprl.Length);
+                LittleEndian.PutShort(shortBuf, 0, (short)grpprl.Length);
 
                 docStream.Write(shortBuf);
                 docStream.Write(grpprl);

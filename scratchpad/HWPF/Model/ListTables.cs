@@ -107,7 +107,7 @@ namespace NPOI.HWPF.Model
             MemoryStream levelBuf = new MemoryStream();
 
             byte[] shortHolder = new byte[2];
-            LittleEndian.PutShort(shortHolder, (short)listSize);
+            LittleEndian.PutShort(shortHolder, 0, (short)listSize);
             tableStream.Write(shortHolder);
             //TODO:: sort the keys
             foreach (int x in _listMap.Keys)
@@ -133,7 +133,7 @@ namespace NPOI.HWPF.Model
             int size = _overrideList.Count;
 
             byte[] intHolder = new byte[4];
-            LittleEndian.PutInt(intHolder, size);
+            LittleEndian.PutInt(intHolder, 0, size);
             tableStream.Write(intHolder);
 
             for (int x = 0; x < size; x++)

@@ -60,7 +60,7 @@ namespace NPOI.HWPF
         protected byte[] _mainStream;
 
         protected HWPFDocumentCore()
-            : base(null, null)
+            : base((DirectoryNode)null)
         {
 
         }

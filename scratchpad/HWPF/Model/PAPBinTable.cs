@@ -421,7 +421,7 @@ namespace NPOI.HWPF.Model
                 }
 
                 byte[] intHolder = new byte[4];
-                LittleEndian.PutInt(intHolder, pageNum++);
+                LittleEndian.PutInt(intHolder, 0, pageNum++);
                 binTable.AddProperty(new GenericPropertyNode(start, end, intHolder));
 
             }

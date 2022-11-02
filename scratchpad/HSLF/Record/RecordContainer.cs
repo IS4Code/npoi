@@ -329,7 +329,7 @@ namespace NPOI.HSLF.Record
                 // Write out our header, less the size
                 mout.Write(new byte[] { headerA, headerB });
                 byte[] typeB = new byte[2];
-                LittleEndian.PutShort(typeB, (short)type);
+                LittleEndian.PutShort(typeB, 0, (short)type);
                 mout.Write(typeB);
                 mout.Write(new byte[4]);
 
@@ -358,7 +358,7 @@ namespace NPOI.HSLF.Record
                 // Write out our header, less the size
                 baos.Write(new byte[] { headerA, headerB }, 0, 2);
                 byte[] typeB = new byte[2];
-                LittleEndian.PutShort(typeB, (short)type);
+                LittleEndian.PutShort(typeB, 0, (short)type);
                 baos.Write(typeB, 2, 2);
                 baos.Write(new byte[] { 0, 0, 0, 0 }, 4, 4);
 

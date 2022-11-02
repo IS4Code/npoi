@@ -45,7 +45,7 @@ namespace NPOI.HWPF.SPRM
         {
             byte[] sprm = new byte[varParam.Length + 4];
             System.Array.Copy(varParam, 0, sprm, 4, varParam.Length);
-            LittleEndian.PutShort(sprm, instruction);
+            LittleEndian.PutShort(sprm, 0, instruction);
             LittleEndian.PutShort(sprm, 2, (short)(varParam.Length + 1));
             list.Add(sprm);
             return sprm.Length;
@@ -133,7 +133,7 @@ namespace NPOI.HWPF.SPRM
         public static int ConvertBrcToInt(short[] brc)
         {
             byte[] buf = new byte[4];
-            LittleEndian.PutShort(buf, brc[0]);
+            LittleEndian.PutShort(buf, 0, brc[0]);
             LittleEndian.PutShort(buf, LittleEndianConsts.SHORT_SIZE, brc[1]);
             return LittleEndian.GetInt(buf);
         }

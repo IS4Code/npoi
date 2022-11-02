@@ -140,7 +140,7 @@ namespace NPOI.HWPF.Model
         {
             byte[] buf = new byte[28];
             int offset = 0;
-            LittleEndian.PutInt(buf, _lsid);
+            LittleEndian.PutInt(buf, 0, _lsid);
             offset += LittleEndianConsts.INT_SIZE;
             LittleEndian.PutInt(buf, offset, _tplc);
             offset += LittleEndianConsts.INT_SIZE;

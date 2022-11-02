@@ -189,7 +189,7 @@ namespace NPOI.HWPF.SPRM
                 byte[] buf = new byte[7];
                 buf[0] = (byte)(newSEP.GetFPropMark() ? 1 : 0);
                 int offset = LittleEndianConsts.BYTE_SIZE;
-                LittleEndian.PutShort(buf, (short)newSEP.GetIbstPropRMark());
+                LittleEndian.PutShort(buf, 0, (short)newSEP.GetIbstPropRMark());
                 offset += LittleEndianConsts.SHORT_SIZE;
                 newSEP.GetDttmPropRMark().Serialize(buf, offset);
                 size += SprmUtils.AddSprm(unchecked((short)0xD227), -1, buf, sprmList);
