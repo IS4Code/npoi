@@ -29,10 +29,15 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>2.5.6</Version>
     <PackageProjectUrl>https://github.com/IllidanS4/npoi</PackageProjectUrl>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/IllidanS4/npoi/master/LICENSE</PackageLicenseUrl>
-    <PackageId>POI.ScratchPad.HWPF</PackageId>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageId>ScratchPad.NPOI.HWPF</PackageId>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
     <None Include="npoi.snk" />
   </ItemGroup>
   <ItemGroup>
