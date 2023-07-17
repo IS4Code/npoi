@@ -27,7 +27,7 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>npoi.snk</AssemblyOriginatorKeyFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.5.6</Version>
+    <Version>2.5.7</Version>
     <PackageProjectUrl>https://github.com/IllidanS4/npoi</PackageProjectUrl>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageId>ScratchPad.NPOI.HWPF</PackageId>
